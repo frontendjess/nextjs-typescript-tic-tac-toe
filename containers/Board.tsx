@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import Square from "../components/Square";
 
-type Player = "X" | "O" | "BOTH" | null;
+type PlayerWinner = "X" | "O" | "BOTH" | null;
 
-function calculateWinner(squares: Player[]) {
+function calculateWinner(squares: PlayerWinner[]) {
     const lines = [
         [0, 1, 2],
         [3, 4, 5],
@@ -29,7 +29,7 @@ function Board() {
     const [currentPlayer, setCurrentPlayer] = useState<"X" | "O">(
         Math.round(Math.random() * 1) === 1 ? "X" : "O"
     );
-    const [winner, setWinner] = useState<Player>(null);
+    const [winner, setWinner] = useState<PlayerWinner>(null);
 
     function reset() {
         setSquares(Array(9).fill(null));
