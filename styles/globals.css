@@ -24,3 +24,39 @@ a {
     background: black;
   }
 }
+
+.grid {
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  font-size: 5rem;
+  color: hotpink;
+  border: solid 1px white;
+}
+
+.square_o {
+  background-color: rgb(255, 255, 255);
+}
+
+.square_x {
+  background-color: black;
+}
+
+p {
+  font-size: 2rem;
+}
+
+.reset {
+  margin-top: 2rem;
+  font-size: 2rem;
+  background-color: hotpink;
+  border: none;
+  border-radius: 6px;
+  padding: 1rem;
+  cursor: pointer;
+}
